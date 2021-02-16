@@ -5,6 +5,8 @@
     --second-color: #848484;
     --second-alpha-color: 0px 4px 4px rgba(0, 0, 0, 0.25);
     --white-color: #E6E6E6; 
+    --white-alpha-color: rgba(255,255,255,0.5);
+    --black-alpha-color: rgba(0,0,0,0.5);
     --text-color: #222;
     --link-color: #BDBDBD;
     --font: "Raleway", sans-serif;   
@@ -78,8 +80,29 @@ img{
 p{
     line-height: 1.6;
 }
-/******** Components ********/
-/*--------------Menu--------------*/
+/* ********************************** Components ********************************** */
+                        /*--------------Hero Image--------------*/
+.hero-image{
+    background-image: var(--hero-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: var(--hero-attachment);
+}
+.hero-image-opacity{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--hero-opacity-color);
+}
+.hero-image-title{
+    font-size: 4vw;
+    color: var(--hero-text-color);
+}
+                        /*--------------Menu--------------*/
 .menu-btn{
     outline: thin solid var(--first-color);
     border: 0;
