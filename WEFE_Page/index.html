@@ -6,8 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hola mundo</h1>
+    <header class="header">
+        <section class="container">
+            <div class="logo">
+                <a href="index.html">W.E.F.E.</a>
+            </div>
+            <button class="menu-btn">
+                <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 5.25H27C27.5 5.25 28 4.8125 28 4.25V1.75C28 1.25 27.5 0.75 27 0.75H1C0.4375 0.75 0 1.25 0 1.75V4.25C0 4.8125 0.4375 5.25 1 5.25ZM1 15.25H27C27.5 15.25 28 14.8125 28 14.25V11.75C28 11.25 27.5 10.75 27 10.75H1C0.4375 10.75 0 11.25 0 11.75V14.25C0 14.8125 0.4375 15.25 1 15.25ZM1 25.25H27C27.5 25.25 28 24.8125 28 24.25V21.75C28 21.25 27.5 20.75 27 20.75H1C0.4375 20.75 0 21.25 0 21.75V24.25C0 24.8125 0.4375 25.25 1 25.25Z" fill="black"/>
+                </svg>
+                <svg class="none" width="28" height="26" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.04688 4.5L8.39062 2.15625C8.69531 1.875 8.69531 1.40625 8.39062 1.125L7.875 0.609375C7.59375 0.304688 7.125 0.304688 6.84375 0.609375L4.5 2.95312L2.13281 0.609375C1.85156 0.304688 1.38281 0.304688 1.10156 0.609375L0.585938 1.125C0.28125 1.40625 0.28125 1.875 0.585938 2.15625L2.92969 4.5L0.585938 6.86719C0.28125 7.14844 0.28125 7.61719 0.585938 7.89844L1.10156 8.41406C1.38281 8.71875 1.85156 8.71875 2.13281 8.41406L4.5 6.07031L6.84375 8.41406C7.125 8.71875 7.59375 8.71875 7.875 8.41406L8.39062 7.89844C8.69531 7.61719 8.69531 7.14844 8.39062 6.86719L6.04688 4.5Z" fill="black"/>
+                </svg>
+                                       
+            </button>
+            <nav class="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#acerca">Acerca</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </section>
+    </header>
+    <section id="inicio" class="home">
+        <article class="hero-image" style="--image: url('img/hero-image-home.jpg')">
+            <aside class="hero-image-opacity">
+                <div class="hero-image-content">
+                    <h2 class="hero-image-title">
+                        Tu mejor opcion <br> para tu <br> diseño web
+                    </h2>
+                </div>
+            </aside>
+        </article>
+    </section>
+    <section id="acerca" class="about">
+        <h2>Acerca</h2>
+    </section>
+    <section id="servicos" class="services">
+        <h2>Servicios</h2>
+    </section>
+    <section id="portafolio" class="portfolio">
+        <h2>Trabajos</h2>
+    </section>
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+    </section>
+    <footer>
+        <small>
+            Sitio diseñado por WEFE
+        </small>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

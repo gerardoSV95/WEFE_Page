@@ -2,8 +2,14 @@
 :root{
     --first-color: #58ACFA;
     --first-alpha-color: rgba(88, 172, 250, 0.75);
+    --second-color: #848484;
+    --second-alpha-color: 0px 4px 4px rgba(0, 0, 0, 0.25);
     --white-color: #E6E6E6; 
+    --text-color: #222;
+    --link-color: #BDBDBD;
     --font: "Raleway", sans-serif;   
+    --max-width: 1200px;
+    --header-heigth: 4rem;
 }
 
 /******** Reset ********/
@@ -22,6 +28,16 @@ html{
 body{
     margin: 0;
     overflow-x: hidden;
+    color: var(--text-color);
+}
+
+a{
+    color: var(--link-color);
+    transition: all 0.5s ease-out;
+}
+
+a:hover{
+    opacity: 0.75;
 }
 
 h1{
@@ -53,12 +69,126 @@ h6{
     margin: 0;
     font-size: 0.7rem;
 }
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+p{
+    line-height: 1.6;
+}
 /******** Components ********/
+/*--------------Menu--------------*/
+.menu-btn{
+    outline: thin solid var(--first-color);
+    border: 0;
+    cursor: pointer;
+    background-color: var(--white-color);
+}
 
+.menu-btn svg{
+    fill: var(--white-color);
+}
+.menu{
+    position: fixed;
+    left: 0;
+    bottom: var(--header-heigth);
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+    background-color: var(--second-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
 
+.menu.is-active{
+    opacity: 1;
+    pointer-events: auto;
+}
+ .menu a{
+     padding: 1rem;
+     font-size: 1.5rem;
+     font-weight: bold;
+     text-align: center;
+     text-decoration: none;
+     color: var(--white-color);
+     
+ }
+
+ .menu a:hover{
+     color: var(--text-color);
+     background-color: var(--white-color);
+ }
+
+ @media screen and (min-width: 1024px){  
+     .menu-btn{
+         display: none;
+     }
+     .menu{
+        position: static;
+        width: auto;
+        flex-direction: row;
+        opacity: 1;
+        pointer-events: auto;
+     }
+     .menu a{
+         padding: 0 1rem;
+     }
+     .menu a:hover{
+         background-color:transparent ;
+     }
+     .menu a:last-child{
+         padding-right: 0;
+     }
+ }
 /******** Utilities ********/
 .box-shadow-1{
     box-shadow:  0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
 }
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+}
+
+.none{
+    display: none;
+}
 
 /******** Site Styles ********/
+.header{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    padding: 1rem;
+    width: 100%;
+    height: var(--header-heigth);
+    background-color: var(--second-color);
+}
+.header >.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.logo a{
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px){  
+
+}
+
+@media screen and (min-width: 1024px){  
+    .header{
+        position: sticky;
+        top: 0;
+        padding: 0.5rem;
+        height: calc(var(--header-heigth)- 0.5rem);
+    }
+}
