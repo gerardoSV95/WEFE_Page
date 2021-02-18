@@ -28,7 +28,7 @@
         $loader.classList.remove("none");
         fetch("https://formsubmit.co/ajax/wefe.info@gmail.com",{
             method: "POST",
-            body:new FormData(e.target);
+            body:new FormData(e.target),
         })  .then((res)=>(res.ok? res.json():Promise.reject(res)))
             .then(json=>{
               console.log(json);
