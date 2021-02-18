@@ -356,7 +356,7 @@ p{
     padding: 0.5rem;
     text-align: center;
     color: var(--white-color);
-    background-color: var(--second-color);
+    background-color: #A4A4A4;
 }
 .header{
     position: fixed;
@@ -409,6 +409,9 @@ p{
         display: grid;
         grid-template-columns: repeat(3,30%);
         justify-content: space-between;
+    }
+    .footer{
+        margin-bottom:0;
     }
     .header{
         position: sticky;
