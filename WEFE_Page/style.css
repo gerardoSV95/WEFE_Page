@@ -163,6 +163,12 @@ p{
     background-position: center;
     background-attachment: var(--hero-attachment);
 }
+.hero-image-content > h3{
+    font: var(--font);
+    font-size: 2rem;
+    color: var(--white-color);
+    width: 100%;
+}
 .hero-image-opacity{
     width: 100%;
     min-height: 100vh;
@@ -376,7 +382,7 @@ p{
 
 .logo a{
     color: var(--white-color);
-    font-weight: bold;
+    font: var(--font);
     font-size: 2rem;
     text-decoration: none;
 }
